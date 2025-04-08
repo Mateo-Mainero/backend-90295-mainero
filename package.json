@@ -1,0 +1,21 @@
+{
+  "name": "backend-cursada-final",
+  "version": "1.0.0",
+  "description": "Proyecto de generación de datos mock para usuarios y mascotas",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^9.6.0",
+    "bcrypt": "^5.1.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.13.2"
+  }
+
+}
