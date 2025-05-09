@@ -1,0 +1,60 @@
+/api/pets:
+  get:
+    summary: Obtener todas las mascotas
+    responses:
+      200:
+        description: Lista de mascotas
+  post:
+    summary: Crear una nueva mascota
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Pet'
+    responses:
+      201:
+        description: Mascota creada
+
+/api/pets/{pid}:
+  get:
+    summary: Obtener mascota por ID
+    parameters:
+      - in: path
+        name: pid
+        required: true
+        schema:
+          type: string
+    responses:
+      200:
+        description: Mascota encontrada
+      404:
+        description: Mascota no encontrada
+  put:
+    summary: Actualizar una mascota
+    parameters:
+      - in: path
+        name: pid
+        required: true
+        schema:
+          type: string
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Pet'
+    responses:
+      200:
+        description: Mascota actualizada
+  delete:
+    summary: Eliminar una mascota
+    parameters:
+      - in: path
+        name: pid
+        required: true
+        schema:
+          type: string
+    responses:
+      200:
+        description: Mascota eliminada

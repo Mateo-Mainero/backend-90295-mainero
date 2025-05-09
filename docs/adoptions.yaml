@@ -1,0 +1,41 @@
+/api/adoptions:
+  get:
+    summary: Obtener todas las adopciones
+    responses:
+      200:
+        description: Lista de adopciones
+  post:
+    summary: Crear una nueva adopción
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Adoption'
+    responses:
+      201:
+        description: Adopción registrada
+
+/api/adoptions/{aid}:
+  get:
+    summary: Obtener adopción por ID
+    parameters:
+      - in: path
+        name: aid
+        required: true
+        schema:
+          type: string
+    responses:
+      200:
+        description: Adopción encontrada
+  delete:
+    summary: Eliminar adopción
+    parameters:
+      - in: path
+        name: aid
+        required: true
+        schema:
+          type: string
+    responses:
+      200:
+        description: Adopción eliminada

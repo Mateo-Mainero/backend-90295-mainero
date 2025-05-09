@@ -1,0 +1,1 @@
+error: Error connecting to MongoDB: querySrv ENOTFOUND _mongodb._tcp.cluster.mongodb.net {"code":"ENOTFOUND","hostname":"_mongodb._tcp.cluster.mongodb.net","stack":"Error: querySrv ENOTFOUND _mongodb._tcp.cluster.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv"}

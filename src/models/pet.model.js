@@ -1,10 +1,27 @@
 import mongoose from 'mongoose';
 
 const petSchema = new mongoose.Schema({
-  name: String,
-  species: String,
-  age: Number
+    name: {
+        type: String,
+        required: true
+    },
+    specie: {
+        type: String,
+        required: true
+    },
+    birthDate: {
+        type: Date,
+        required: true
+    },
+    adopted: {
+        type: Boolean,
+        default: false
+    },
+    image: {
+        type: String
+    }
+}, {
+    timestamps: true
 });
 
-const PetModel = mongoose.model('Pet', petSchema);
-export default PetModel;
+export default mongoose.model('Pet', petSchema); 

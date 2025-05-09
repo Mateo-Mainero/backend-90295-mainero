@@ -1,0 +1,42 @@
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+        pets:
+          type: array
+          items:
+            type: string
+
+    Pet:
+      type: object
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+        age:
+          type: integer
+        adopted:
+          type: boolean
+
+    Adoption:
+      type: object
+      properties:
+        _id:
+          type: string
+        user:
+          type: string
+        pet:
+          type: string
+        date:
+          type: string
+          format: date-time
